@@ -74,7 +74,7 @@ empty). Keep rows scannable; put detail in the solution cell. Use this shape:
 
 | # | Location        | Reviewer  | Comment (summary)              | Proposed solution                          |
 |---|-----------------|-----------|--------------------------------|--------------------------------------------|
-| 1 | app/foo.rb:42   | alice     | N+1 on `orders.each`           | Preload with `.includes(:line_items)`      |
+| 1 | src/orders.py:42 | alice    | N+1 query in the orders loop   | Batch-load line items before the loop      |
 
 ### 🟡 Medium severity
 ...
