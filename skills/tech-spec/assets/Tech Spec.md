@@ -105,7 +105,7 @@ _The key trade-offs baked into the recommended approach and anything else worth 
 
 ## APIs
 
-Prefer GraphQL for new work (`app/graphql/main_schema.rb`). Note REST only where legacy.
+Follow the repo's established API style (REST, GraphQL, RPC); note any deviation and why.
 
 - **Design** (queries/mutations or HTTP methods, request/response payloads):
 - **Authentication** (per endpoint/query):
@@ -119,15 +119,11 @@ Prefer GraphQL for new work (`app/graphql/main_schema.rb`). Note REST only where
 
 ## Automated Testing
 
-- [ ] System tests
-- [ ] Ruby unit tests (models, lib, etc.)
-- [ ] Integration (API) tests
-- [ ] JavaScript unit tests
-- [ ] React component tests + Storybook stories (reusable/stateful standalone components)
+_Describe the coverage: which behaviors and edge cases are tested, and by which kind of test (unit / integration / system / component). Prose, not a checklist of whether testing was done._
 
 ## Other Business Logic / Tech
 
-_Modules, jobs, gems, or other tech worth calling out._
+_Modules, jobs, dependencies, or other tech worth calling out._
 
 ## Events Created
 

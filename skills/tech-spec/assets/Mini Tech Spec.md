@@ -45,11 +45,7 @@ _Summary of the solution._
 
 ## Automated Testing
 
-- [ ] System tests
-- [ ] Ruby unit tests (models, lib, etc.)
-- [ ] Integration (API) tests
-- [ ] JavaScript unit tests
-- [ ] React component tests + Storybook stories (reusable/stateful standalone components)
+_Describe the coverage: which behaviors and edge cases are tested, and by which kind of test (unit / integration / system / component). Prose, not a checklist of whether testing was done._
 
 ### Engineering sign-offs
 
