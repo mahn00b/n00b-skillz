@@ -32,12 +32,6 @@ A set of rules to help an Agent compose mermaid diagrams.
 
 Uses a combination of skills to put together a tech spec that has varying detail. Currently, it can create a more detailed tech-spec and a "mini" version of that. 
 
-### `/guided-dev` 
-
-Great for getting to know an unfamiliar codebase, flexing those dev skills again, or getting started on a human-coded project. It will help plan a change with you. Add files, stub classes and methods, and set you up with any relevant testing stubs.
-
-Currently, it's design to really hold your hand through it. In the future I plan to add difficulty levels to that will produce less and less file stubs
-
 ### `/address-pr-comments`
 
 Detects which PR you're working on based on the current branch of the coding harness. It pulls down all comments, categorizes them by impact, and provides suggestions around how each comments should be resolved. 
