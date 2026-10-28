@@ -44,8 +44,27 @@ Detects which PR you're working on based on the current branch of the coding har
 
 It will then print them in a list for you to select which suggestions to move forward with. You can also provide alternative suggestions to the agent's approach.
 
+## Installation
+
+Symlink each skill into your user-scope skills directory so edits in this repo apply immediately:
+
+```sh
+for d in skills/*/; do ln -s "$PWD/$d" ~/.claude/skills/; done
+```
+
+## Versioning
+
+**Releases are cut automatically from [Conventional Commits](https://www.conventionalcommits.org/).** On every push to `main`, [semantic-release](https://github.com/semantic-release/semantic-release) reads the commits since the last tag, pushes a `vX.Y.Z` tag, and publishes a GitHub Release with generated notes.
+
+- **`fix:`** — patch release
+- **`feat:`** — minor release
+- **`feat!:`** or a `BREAKING CHANGE:` footer — major release
+- **`docs:`, `chore:`, `ci:`, `refactor:`, …** — no release
+
+PRs run [commitlint](https://commitlint.js.org/) against every commit and fail on a non-conforming message. Scope commits by skill where it helps, e.g. `feat(tech-spec): add --long-form flag`.
+
 ## Contributing
 
-Like the skill ideas? Want to contribute? No guidelines set yet. Feel free to fork and PR!
+Like the skill ideas? Want to contribute? Fork and PR — just follow the commit convention above.
 
 
