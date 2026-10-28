@@ -8,35 +8,22 @@ Other than any that contain references to claude code specifically, all skills f
 
 ## Skills
 
-Note that some of the workflows that these skills introduce are tied to my usage of Obsidian. I will update those in the future, but for convenience I've just added the skills as they are now.
+**Six skills, grouped by what they help with.** Each one triggers from its slash command or from a matching request in plain language.
 
-### `/save-context`
+### Session context
 
-For saving per-directory contexts to retain a summary of the current conversation. Helps to maintain some consistency when iterating on a project in the same directory over several conversations.
+- **[`/save-context`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/save-context)** — writes a structured summary of the current conversation to `~/.claude-context/<repo>/<branch>/`, so work on the same branch stays consistent across sessions.
+- **[`/load-context`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/load-context)** — loads the most recent summary saved by `/save-context` for the current worktree and branch.
 
-### `/load-context`
+### Writing and docs
 
-Loads the context saved using the `/save-context` skill above
+- **[`/technical-writing`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/technical-writing)** — house rules for engineering prose: economy, citation, diagrams, and evidence. Agent writing tends to be block-heavy and hard to read; load this before drafting any spec, PR description, review comment, ticket, or repo doc.
+- **[`/mermaid`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/mermaid)** — rules for picking the right Mermaid diagram type and keeping diagrams compact. Other skills load it whenever they draw a diagram.
+- **[`/tech-spec`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/tech-spec)** — starts a tech spec from a bundled template and asks targeted questions to fill it in, optionally pre-filled from a Linear ticket or product spec. Pass `--mini` for a half-page spec or `--long-form` for the full planning sections. Specs go in the directory set by `SPEC_VAULT`; if that's an Obsidian vault, the matching Templater templates are installed too.
 
-### `/technical-writing`
+### Code review
 
-Agent technical writing tends to be block-heavy, unclear, and generally difficult to read. This skill provides a set rules to ensure that the writing is clear, concise, to the point, and visually appealing.
-
-Hook this skill into documentation writing.
-
-### `/mermaid` 
-
-A set of rules to help an Agent compose mermaid diagrams. 
-
-###  `/tech-spec`
-
-Uses a combination of skills to put together a tech spec that has varying detail. Currently, it can create a more detailed tech-spec and a "mini" version of that. 
-
-### `/address-pr-comments`
-
-Detects which PR you're working on based on the current branch of the coding harness. It pulls down all comments, categorizes them by impact, and provides suggestions around how each comments should be resolved. 
-
-It will then print them in a list for you to select which suggestions to move forward with. You can also provide alternative suggestions to the agent's approach.
+- **[`/address-pr-comments`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/address-pr-comments)** — pulls the unresolved review comments on the current branch's PR, classifies each by severity, and drafts a fix for each. Nothing changes until you approve which fixes to apply, and you can swap in your own approach for any of them.
 
 ## Installation
 
