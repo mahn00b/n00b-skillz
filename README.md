@@ -43,6 +43,7 @@ It will then print them in a list for you to select which suggestions to move fo
 Symlink each skill into your user-scope skills directory so edits in this repo apply immediately:
 
 ```sh
+mkdir -p ~/.claude/skills
 for d in skills/*/; do ln -s "$PWD/$d" ~/.claude/skills/; done
 ```
 
