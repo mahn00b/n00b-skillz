@@ -104,7 +104,7 @@ _The key trade-offs baked into the recommended approach and anything else worth 
 <!-- Optional: delete if no API changes -->
 ## APIs
 
-Prefer GraphQL for new work (`app/graphql/main_schema.rb`). Note REST only where legacy.
+Follow the repo's established API style (REST, GraphQL, RPC); note any deviation and why.
 
 - **Design** (queries/mutations or HTTP methods, request/response payloads):
 - **Authentication** (per endpoint/query):
@@ -124,7 +124,7 @@ _Describe the coverage: which behaviors and edge cases are tested, and by which 
 <!-- Optional -->
 ## Other Business Logic / Tech
 
-_Modules, jobs, gems, or other tech worth calling out._
+_Modules, jobs, dependencies, or other tech worth calling out._
 
 <!-- Optional: delete if no events. If kept, tag consumers in the stakeholder sign-off. -->
 ## Events Created
