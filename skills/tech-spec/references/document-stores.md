@@ -76,5 +76,7 @@ EOF
 ```
 
 **`locate` also returns an `obsidian://` link**, so the user can open the note directly:
-`obsidian://open?vault=<vault-name>&file=<url-encoded store path>`, where the vault name is the
-basename of `DOC_STORE_PATH`.
+`obsidian://open?vault=<url-encoded vault name>&file=<url-encoded store path>`, where the vault
+name is the basename of `DOC_STORE_PATH`. Percent-encode both values in full (reserved
+characters like `&`, `#`, `?`, `/` included), e.g. with
+`python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "<value>"`.
