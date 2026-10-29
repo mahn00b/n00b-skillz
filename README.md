@@ -19,7 +19,7 @@ Other than any that contain references to claude code specifically, all skills f
 
 - **[`/technical-writing`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/technical-writing)** — house rules for engineering prose: economy, citation, diagrams, and evidence. Agent writing tends to be block-heavy and hard to read; load this before drafting any spec, PR description, review comment, ticket, or repo doc.
 - **[`/mermaid`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/mermaid)** — rules for picking the right Mermaid diagram type and keeping diagrams compact. Other skills load it whenever they draw a diagram.
-- **[`/tech-spec`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/tech-spec)** — starts a tech spec from a bundled template and asks targeted questions to fill it in, optionally pre-filled from a Linear ticket or product spec. Pass `--mini` for a half-page spec or `--long-form` for the full planning sections. Specs go in the directory set by `SPEC_VAULT`; if that's an Obsidian vault, the matching Templater templates are installed too.
+- **[`/tech-spec`](https://github.com/mahn00b/n00b-skillz/tree/main/skills/tech-spec)** — starts a tech spec from a bundled template and asks targeted questions to fill it in, optionally pre-filled from a product spec. Pass `--long-form` to keep the full planning sections. Specs are written to a document store set by `DOC_STORE` / `DOC_STORE_PATH` — a plain Markdown directory or an Obsidian vault, which also gets a Templater template.
 
 ### Code review
 
@@ -40,7 +40,7 @@ for d in skills/*/; do ln -s "$PWD/$d" ~/.claude/skills/; done
 
 - **`fix:`** — patch release
 - **`feat:`** — minor release
-- **`feat!:`** or a `BREAKING CHANGE:` footer — major release
+- **`feat!:`** or a `BREAKING CHANGE:` footer — major release; minor while on `0.x`, via a `releaseRules` entry in [`.releaserc.json`](https://github.com/mahn00b/n00b-skillz/blob/main/.releaserc.json) that gets removed to cut `1.0.0`
 - **`docs:`, `chore:`, `ci:`, `refactor:`, …** — no release
 
 PRs run [commitlint](https://commitlint.js.org/) against every commit and fail on a non-conforming message. Scope commits by skill where it helps, e.g. `feat(tech-spec): add --long-form flag`.
