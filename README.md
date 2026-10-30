@@ -40,7 +40,7 @@ for d in skills/*/; do ln -s "$PWD/$d" ~/.claude/skills/; done
 
 - **`fix:`** — patch release
 - **`feat:`** — minor release
-- **`feat!:`** or a `BREAKING CHANGE:` footer — major release; minor while on `0.x`, via a `releaseRules` entry in [`.releaserc.json`](https://github.com/mahn00b/n00b-skillz/blob/main/.releaserc.json) that gets removed to cut `1.0.0`
+- **`feat!:`** or a `BREAKING CHANGE:` footer — major release
 - **`docs:`, `chore:`, `ci:`, `refactor:`, …** — no release
 
 PRs run [commitlint](https://commitlint.js.org/) against every commit and fail on a non-conforming message. Scope commits by skill where it helps, e.g. `feat(tech-spec): add --long-form flag`.
